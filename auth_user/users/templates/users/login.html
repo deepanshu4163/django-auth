@@ -3,15 +3,15 @@
 
 {% block content %}
     <form action="" method="POST">
-        <legend class="border-bottom mb-2">Register</legend>
+        <legend class="border-bottom mb-2">LogIn</legend>
         {{form|crispy}}
         {% csrf_token %}
         <div>
-            <button class="btn btn-outline-info" type="submit">Register</button>
+            <button class="btn btn-outline-info" type="submit">LogIn</button>
         </div>
         <div>
             <small>
-                Already have an account? <a href="{% url 'login' %}">LogIn</a>
+                Don't have an account? <a href="{% url 'register' %}">Register</a>
             </small> 
         </div>
     </form>
